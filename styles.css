@@ -83,6 +83,8 @@ section {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding: 4rem 0;
+    text-align: center; /* Agrega esta línea para centrar el texto */
 }
 
 section.active {
@@ -98,6 +100,9 @@ section h1, section h2, section h3 {
     margin-bottom: 1rem;
     display: inline-block;
     padding-left: 2rem;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 section p {
@@ -117,7 +122,7 @@ section img {
 
 .partners img {
     max-width: 100%;
-    height: auto;
+    height: 400px;
     display: block;
     margin: 0 auto;
     border-radius: 1cm
