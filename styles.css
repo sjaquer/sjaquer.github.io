@@ -41,8 +41,8 @@ header .logo {
 }
 
 header .logo img {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     margin-right: 0.5rem;
 }
 
@@ -108,15 +108,20 @@ section p {
 }
 
 section img {
-    width: 100%;
-    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 1cm
 }
 
 .partners img {
-    width: 150px;
-    margin: 0.5rem;
-    border-radius: 8px;
-}
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 1cm
+  }
 
 .plans {
     display: flex;
@@ -135,9 +140,12 @@ section img {
 }
 
 .plan img {
-    width: 100%;
-    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
     margin-bottom: 1rem;
+    display: block;
+    margin: 0 auto;
 }
 
 .plan h3 {
@@ -318,3 +326,4 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
