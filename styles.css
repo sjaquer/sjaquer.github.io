@@ -1,0 +1,320 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Fallback para otras fuentes */
+}
+
+body {
+    background: linear-gradient(135deg, #ff5379 25%, #82b1ff 75%);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Cabecera */
+header {
+    background: #ff5379;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif; /* Aplicando Nunito al logo */
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+    font-family: 'Nunito', sans-serif; /* Aplicando Nunito a los enlaces */
+}
+
+header nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Secciones */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h1, section h2, section h3 {
+    font-family: 'Nunito', sans-serif; /* Aplicando Nunito a los títulos */
+    color: #ff5379;
+    font-weight: 700; /* Ajusta el peso de la fuente según necesites */
+    font-style: normal;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+section p {
+    font-family: 'Nunito', sans-serif; /* Aplicando Nunito a los párrafos */
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1rem;
+}
+
+section img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.partners img {
+    width: 150px;
+    margin: 0.5rem;
+    border-radius: 8px;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    text-align: center;
+}
+
+.plan img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.plan ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan li {
+    margin-bottom: 0.5rem;
+}
+
+.plan .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    animation: color-change 2s infinite alternate;
+}
+
+@keyframes color-change {
+    0% {
+        color: #ff5379;
+    }
+    50% {
+        color: #82b1ff;
+    }
+    100% {
+        color: #4caf50;
+    }
+}
+
+/* Formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form .submit-button {
+    background: #ff5379;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form .submit-button:hover {
+    background: #ff3355;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #ff5379;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de scroll-to-top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #ff5379;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.scroll-to-top:hover {
+    background: #ff3355;
+}
+
+/* Burbuja de chat */
+.chat-bubble {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #ff5379;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.chat-box .chat-header {
+    background: #ff5379;
+    color: #fff;
+    padding: 0.5rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-box .chat-content {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.chat-box .chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-box .chat-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.chat-box .chat-input input:focus {
+    outline: none;
+}
+
+/* Efectos de animación para las secciones */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
